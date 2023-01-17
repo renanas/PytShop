@@ -1,6 +1,6 @@
 clientResponse = [
     {
-        'id': 0,
+        'ID': 0,
         'nome': 'Renan',
         'genero': 'Masculino',
         'idade': 25,
@@ -26,7 +26,7 @@ clientResponse = [
         'ativo': True
     },
     {
-        'id': 1,
+        'ID': 1,
         'nome': 'Hugo',
         'genero': 'Masculino',
         'idade': 25,
@@ -34,10 +34,10 @@ clientResponse = [
         'animais': [
             {
                 'tipo': 'Cachorro',
-                'nome': 'Maggie',
+                'nome': 'Lilica',
                 'raça': 'Vira-Lata',
                 'genero': 1,
-                'idade': 100
+                'idade': 16
 
             },
         ],

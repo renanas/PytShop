@@ -2,7 +2,7 @@ from flask import Blueprint, make_response, jsonify, request
 
 from ClientResponse import clientResponse
 
-client_ct = Blueprint('hello', __name__)
+client_ct = Blueprint('Cliente', __name__)
 
 # ROUTES
 @client_ct.route('', methods=['GET'])
@@ -14,7 +14,7 @@ def getOneClient(id):
     clienteid = id
 
     for indice, cliente in enumerate(clientResponse):
-        if cliente.get('id') == clienteid:
+        if cliente.get('ID') == clienteid:
             responseCliente = cliente
 
     return make_response(jsonify(responseCliente))
@@ -29,7 +29,7 @@ def postClient():
 def putClient():
     clienteRequest = request.json
     for indice, cliente in enumerate(clientResponse):
-        if cliente.get('id') == clienteRequest.get('id'):
+        if cliente.get('ID') == clienteRequest.get('ID'):
             clientResponse[indice] = clienteRequest
 
     return make_response(jsonify(clientResponse))
@@ -38,7 +38,7 @@ def putClient():
 def deleteClient(id):
     clienteid = id
     for indice, cliente in enumerate(clientResponse):
-        if cliente.get('id') == clienteid:
+        if cliente.get('ID') == clienteid:
             del clientResponse[indice]
 
     return make_response(jsonify(clientResponse))
