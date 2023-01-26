@@ -1,5 +1,5 @@
 
-from fastapi import Depends, APIRouter, Request, Body
+from fastapi import APIRouter, Body
 
 from .ClienteRequest import ClienteRequest
 from .ClienteResponse import clientesLista

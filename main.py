@@ -2,11 +2,11 @@
 from fastapi import FastAPI
 import clientes
 from clientes import ClienteController
+import animais
+from animais import AnimalController
 
 app = FastAPI()
 
-print('route /client GET')
 app.include_router(clientes.ClienteController.router)
+app.include_router(animais.AnimalController.router)
 
-print('route /animal GET')
-#app.register_blueprint(animal_ct, url_prefix='/animal')
